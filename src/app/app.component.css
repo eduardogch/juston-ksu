@@ -1,0 +1,39 @@
+* {
+    font-family: Garamond, sans-sarif;
+}
+
+img {
+    height:20em;
+    width: 25em;
+    position: center;
+    margin: auto;
+  }
+
+.Title{
+    text-align: center;
+    background-color: rgb(212, 185, 32);
+    border: 1em solid black;
+}
+
+.Form{
+    text-align: center;
+    background-color: rgb(177, 174, 174);
+    border: .5em solid black;
+    margin: auto;
+}
+
+.Feeling{
+    text-align: center;
+    background-color: rgb(212, 185, 32);
+    border: .5em solid black;
+}
+
+.Body{
+    text-align: center;
+    background-color: rgb(177, 174, 174);
+    border: 1em solid black;
+}
+
+.List{
+    text-align: center;
+}

@@ -1,20 +1,44 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<head>
 
+</head>
+  <div class="Title" style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <div class="Form">
+    <h1>
+        {{ formName }}
+    </h1>
+    <h2>
+        <app-name-editor></app-name-editor>
+        <app-button></app-button>
+    </h2>
+  </div>
+  <div class="Feeling">
+    <img width="300" alt="Angular Logo" src="https://image.freepik.com/free-vector/mood-emoticons_23-2147515886.jpg?1">
+  </div>
+  <div class="Body">
+  <h2>We aim to improve your mood!</h2>
+    <li class="List"><h3 class="Team">{{Member1}}</h3></li>  
+    <li class="List"><h3 class="Team">{{Member2}}</h3></li>
+    <li class="List"><h3 class="Team">{{Member3}}</h3></li>
+    <li class="List"><h3 class="Team">{{Member4}}</h3></li>
+  </div>
+  <br>
+  <div class="Feeling">
+      <h2>SEND DATA TO THE SERVER</h2>
+      <app-new-student-form></app-new-student-form>
+  </div>
+  
+  <br>
+
+  <div class="Feeling">
+    <h2>GET DATA FROM THE SERVER</h2>
+    <ul *ngFor ="let student of students let i = index">
+      <li> {{student._id}}: {{student.Feeling}} | {{student.FoodType}} > {{student.FoodName}}
+        <button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button>
+      </li>
+    </ul>
+  </div>

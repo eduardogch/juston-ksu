@@ -1,0 +1,17 @@
+<div>
+  <h1>New Feeling-Food Form</h1>
+  <p>Please share a feeling and a food you like to eat when you feel that way.</p>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-form-field >
+      <input matInput placeholder="Feeling" id="Feeling" [(ngModel)]="Feeling" name="Feeling" >
+    </mat-form-field>
+  
+    <mat-form-field >
+      <input matInput placeholder="FoodName" id="FoodName" [(ngModel)]="FoodName" name="FoodName" >
+    </mat-form-field>
+  
+    <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+    </p>
+  </form>  
+  </div>

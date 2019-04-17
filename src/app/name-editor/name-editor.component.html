@@ -1,0 +1,31 @@
+<div Class="Feeling">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <mat-form-field >
+      <input matInput placeholder="firstName" id="firstName" [(ngModel)]="firstName" name="firstName" >
+    </mat-form-field>
+  
+    <mat-form-field >
+      <input matInput placeholder="lastName" id="lastName" [(ngModel)]="lastName" name="lastName" >
+    </mat-form-field>
+
+    <mat-form-field >
+      <input matInput placeholder="email" id="email" [(ngModel)]="email" name="email" >
+    </mat-form-field>
+    <br>
+    <mat-form-field >
+      <input matInput placeholder="city" id="city" [(ngModel)]="city" name="city" >
+    </mat-form-field>
+
+    <mat-form-field >
+      <input matInput placeholder="state" id="state" [(ngModel)]="state" name="state" >
+    </mat-form-field>
+
+    <mat-form-field >
+        <input matInput placeholder="mood" id="mood" [(ngModel)]="mood" name="mood" >
+      </mat-form-field>
+      <br>  
+    <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+    </p>
+  </form>  
+  </div>
